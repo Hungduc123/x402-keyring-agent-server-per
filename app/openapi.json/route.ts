@@ -53,10 +53,17 @@ function paidOperation(route: (typeof PAID_ROUTES)[number]) {
         price: { mode: "fixed", currency: "USD", amount: route.price },
         protocols: [{ x402: {} }],
       },
-      // No transfer details are taken — the route is a bare paywall. The empty
-      // query object is here so the operation carries an input schema, which
-      // x402scan requires to register the endpoint.
+      // No transfer details are taken — the route is a bare paywall, so the
+      // input schema is an empty object. An empty schema is not the same as a
+      // missing one: x402scan warns on operations with no input schema at all,
+      // while this states positively that the route takes no parameters.
       parameters: [] as unknown[],
+      "x-input-schema": {
+        type: "object",
+        properties: {},
+        required: [] as string[],
+        additionalProperties: false,
+      },
       responses: {
         "200": {
           description: "Fee settled",
