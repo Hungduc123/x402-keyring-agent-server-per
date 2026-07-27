@@ -27,10 +27,10 @@ export const payToAddress: Address = payTo;
 // challenge agree. The three routes are the same paywall over three different
 // wallet actions, priced by how much value each one moves.
 export const PRICES_USD = {
-  "send-token": "0.05",
-  "send-native": "0.05",
-  "send-nft": "0.05",
-  "add-pool": "3",
+  "send-token": "0.001",
+  "send-native": "0.001",
+  "send-nft": "0.001",
+  "add-pool": "0.003",
 } as const;
 
 // Human-readable label for the one payment option we accept. The OpenAPI doc
