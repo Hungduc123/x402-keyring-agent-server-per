@@ -31,8 +31,9 @@ const PAID_ROUTES = [
   {
     path: "/api/add-pool",
     operationId: "addPool",
-    summary: "Add Pool — pay the add-liquidity execution fee",
-    description: "Pay the execution fee for adding liquidity to a pool.",
+    summary: "Add Pool — pay the Uniswap V3 add-liquidity execution fee",
+    description:
+      "Pay the execution fee for adding liquidity to a Uniswap V3 pool.",
     price: PRICES_USD["add-pool"],
   },
 ] as const;

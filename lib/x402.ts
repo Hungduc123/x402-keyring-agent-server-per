@@ -43,7 +43,7 @@ const DESCRIPTIONS = {
   "send-token": "Pay the send-token execution fee (ERC-20 transfer)",
   "send-native": "Pay the send-native execution fee (native coin transfer)",
   "send-nft": "Pay the send-nft execution fee (ERC-721/1155 transfer)",
-  "add-pool": "Pay the add-pool execution fee (add liquidity to a pool)",
+  "add-pool": "Pay the add-pool execution fee (add liquidity to a Uniswap V3 pool)",
 } as const satisfies Record<keyof typeof PRICES_USD, string>;
 
 // Discovery metadata for one paid route, in the Bazaar extension shape that

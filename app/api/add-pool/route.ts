@@ -5,9 +5,9 @@ import { server } from "@/lib/x402";
 // The CDP SDK needs Node APIs — it does not run on the edge runtime.
 export const runtime = "nodejs";
 
-// The paid business logic for an add-pool (add-liquidity) action. Only runs after
-// a valid x402 payment is verified by the facilitator, so reaching this line
-// means the fee has been settled.
+// The paid business logic for an add-pool (Uniswap V3 add-liquidity) action.
+// Only runs after a valid x402 payment is verified by the facilitator, so
+// reaching this line means the fee has been settled.
 //
 // The response body is a small JSON receipt: the client treats it as "the fee is
 // paid, you may now broadcast the add-liquidity tx" — and nothing else. This
